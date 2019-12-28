@@ -1,0 +1,42 @@
+# List all possible docker CLI commands
+docker
+
+# Check version for daemon and client
+docker version
+
+# Check installation infos
+docker info
+
+# Check all currently running containers
+docker ps
+docker ps -a
+
+# Running Docker containers
+docker run hello-world
+docker run ubuntu
+docker run -d -p 80:80 nginx
+docker run -ti ubuntu bash
+docker run --rm --name my_container hello-world
+docker run -ti --rm --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql
+
+# Show the logs of a running docker container
+docker logs <container_id>
+
+# Stops a running container
+docker stop <container_id>
+
+# Removing docker containers
+docker rm <container_id>
+
+# List all docker images downloaded on this host
+docker images
+
+# Delete image
+docker rmi hello-world
+
+# Execute a command into a running container
+docker exec -ti <container_id> bash
+
+# Build a new docker image from an existing Dockerfile
+docker build -t <image_name>:<tag> .
+docker build -t <image_name>:<tag> .
