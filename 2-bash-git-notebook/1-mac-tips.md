@@ -1,6 +1,6 @@
 A few tips for co-existing with Mac in peace.
 
-1) Add the right click feature to your mouse and increase sensitivity!
+1) Add the right click feature to your mouse and increase mouse sensitivity!
 
 2) Fix the keyboard "repeat key" 
 

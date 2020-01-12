@@ -1,7 +1,9 @@
-### Basic navigation shell commands
+### Be able to Navigate through the file system
 
 # date - Displays current date
 date
+date --help
+date -u
 
 # man - Displays the manual for all other commands in the shell
 man date

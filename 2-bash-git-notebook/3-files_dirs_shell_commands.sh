@@ -1,4 +1,4 @@
-### Basic files and directories shell commands
+### Work with Files and Directories
 
 # mkdir - Create the directory, if they do not already exist
 mkdir <my_new_directory>                                          # Creates single directory
@@ -19,7 +19,7 @@ touch <any_file>
 
 # nano / vi - Creates and/or edit files
 nano <any_file>
-vi <any_file>
+vi <any_file> (to leave vi press escape, then type :q or :wq and enter)
 
 # cat - Concatenate FILE(s) to standard output. (prints files)
 cat any_file1 any_file2 ... any_file_n

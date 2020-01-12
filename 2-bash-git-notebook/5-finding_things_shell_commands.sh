@@ -1,4 +1,4 @@
-# Finding things with shell
+# Finding files and contents in files
 
 # find - GNU find  searches the  directory described
 find / -iname "*.csv"
