@@ -15,3 +15,6 @@ git status
 # checkout - Checkouts branch
 git checkout <branch_name>
 git checkout master
+
+# git log - Shows last commits and messages
+git log
