@@ -6,6 +6,8 @@ my_int_var = 34
 my_boolean_var = True
 my_list_var = ['a string', 35, False, my_boolean_var]
 my_float_var = 3.14
+my_set_var = {1, 1, 2, 3, 3}
+my_dictionary_var = {"key1": "value1", "key2": "value2"}
 
 # Now let's print each variable and their type
 print(my_string_var)
