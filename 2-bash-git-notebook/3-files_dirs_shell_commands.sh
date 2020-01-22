@@ -10,9 +10,9 @@ cp -r <source_file> <target_path> # Copy directory and files inside it
 
 # mv - Rename SOURCE to DEST, or move SOURCE(s) to DIRECTORY.
 mv <source_file> <target_directory>     # Moves single file from source_file to target_path
-mv <old_file_name> <new_file_name> # Renames an existing file
-mv *.csv my-target-directory       # Moves all files with an csv extension to `my-target-directory`
-mv data* my-target-directory       # Moves all files starting with data to `my-target-directory`
+mv <old_file_name> <new_file_name>      # Renames an existing file
+mv *.csv my-target-directory            # Moves all files with an csv extension to `my-target-directory`
+mv data* my-target-directory            # Moves all files starting with data to `my-target-directory`
 
 # touch - Update  the  access  and modification times of each FILE to the current time
 touch <any_file>

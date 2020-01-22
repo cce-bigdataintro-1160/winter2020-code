@@ -31,6 +31,7 @@ uniq filename.txt
 # > or >> - Outputting results to a file using > or >>
 cat file1.txt > output.txt   # Always overwrites files
 cat file1.txt >> output.txt  # Always appends to files
+cat file1.txt file2.txt >> output.txt  # concatenates two files!
 
 # display disk usage statistic
 du -a .
