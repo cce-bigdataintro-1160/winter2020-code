@@ -6,13 +6,13 @@
 
 PROVIDED_PATH=$1
 
-printf "Listing all files in ${PROVIDED_PATH} \n\n"
+rm -f /tmp/file_lenghts.txt
 
+printf "Listing all files in ${PROVIDED_PATH} \n\n"
 for f in $PROVIDED_PATH/*
 do
-        echo $f
-        rm -f /tmp/file_lenghts.txt
-        wc -l $f >> /tmp/file_lenghts.txt
+  echo $f
+  wc -l $f >> /tmp/file_lenghts.txt
 done
 
 LONGEST_FILE=$(sort -nr /tmp/file_lenghts.txt | head -n1)
