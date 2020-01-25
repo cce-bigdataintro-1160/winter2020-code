@@ -3,7 +3,7 @@
 # pip install --upgrade google-cloud-storage
 from google.cloud import storage
 
-
+# https://cloud.google.com/storage/docs/uploading-objects
 def upload_blob(bucket_name, source_file_name, destination_blob_name):
     """Uploads a file to the bucket."""
     # bucket_name = "your-bucket-name"

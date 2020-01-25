@@ -3,7 +3,7 @@
 # pip install --upgrade google-cloud-storage
 from google.cloud import storage
 
-
+# https://cloud.google.com/storage/docs/downloading-objects
 def download_blob(bucket_name, source_blob_name, destination_file_name):
     """Downloads a blob from the bucket."""
     # bucket_name = "your-bucket-name"
