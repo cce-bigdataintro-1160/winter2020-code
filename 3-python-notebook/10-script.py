@@ -2,6 +2,7 @@
 
 import argparse
 
+
 # We define the necessary functions ahead of usage
 def sum_ints(a, b):
     return a + b
