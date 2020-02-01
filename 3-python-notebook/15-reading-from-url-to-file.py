@@ -14,7 +14,7 @@ response = urllib.request.urlopen(url)
 data = response.read()
 text = data.decode('utf-8')
 
-my_file = open('output_file', 'w+')
+my_file = open('output_file', 'w+', encoding="utf-8")
 
 my_file.write(text + '\n')
 
