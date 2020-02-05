@@ -27,7 +27,7 @@ def reverse(s):
     return s[::-1]
 
 
-def isPalindrome(s):
+def is_palindrome(s):
     if s == reverse(s):
         return True
     else:
