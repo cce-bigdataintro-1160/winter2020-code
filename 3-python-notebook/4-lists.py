@@ -12,3 +12,6 @@ print(f'The len method can show the length of your list {len(numbers)}')
 # Finally we can print all elements in a list one by one using a for-loop to iterate over each item
 for n in numbers:
     print(f'The number is {n}')
+
+# A list can contain other lists!
+matrix = [[1,2,3],[4,5,6],[7,8,9]]
