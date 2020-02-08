@@ -1,6 +1,3 @@
-
-
-
 #!/bin/bash
 
 # This for iterates 4 times over the items [0, 1, 2 and S].
