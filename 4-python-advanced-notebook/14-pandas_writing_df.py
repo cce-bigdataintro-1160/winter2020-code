@@ -15,7 +15,7 @@ def pretty_print(name, to_print):
 df = pd.read_csv('data/insurance.csv', header=0)
 
 df.to_excel('data/created_train.xlsx')
-df.to_x('data/created_train.xlsx')
+df.to_csv('data/created_train.csv')
 df.to_json('data/created_train.json', orient='records')
-# df.to_parquet('data/created_train.parquet')
+df.to_parquet('data/created_train.parquet')
 pdx.to_avro('data/created_train.avro', df)
