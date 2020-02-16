@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import urllib.request
+import requests
 
 # https://github.com/public-apis/public-apis
 
@@ -9,8 +9,6 @@ url = 'https://www.theweathernetwork.com/ca/weather/quebec/montreal/'
 # url = 'https://raw.githubusercontent.com/prust/wikipedia-movie-data/master/movies.json'
 # url = 'https://dog.ceo/api/breeds/image/random'
 
-response = urllib.request.urlopen(url)
-data = response.read()
-text = data.decode('utf-8')
+response = requests.get(url)
 
-print(text)
+print(response.text)
