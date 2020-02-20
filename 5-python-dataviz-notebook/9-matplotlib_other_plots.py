@@ -20,6 +20,8 @@ df.columns=['id', 'diagnosis', 'mean radius', 'mean texture', 'mean perimeter', 
  'worst smoothness', 'worst compactness', 'worst concavity',
  'worst concave points', 'worst symmetry', 'worst fractal dimension']
 
+
+# We remove the id column as it's useless for any data exploration
 df.drop('id', axis=1, inplace=True)
 
 os.makedirs('plots/9-matplotlib_other_plots', exist_ok=True)
