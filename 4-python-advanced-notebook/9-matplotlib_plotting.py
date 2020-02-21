@@ -21,10 +21,9 @@ os.makedirs('plots', exist_ok=True)
 
 # Plotting line chart
 plt.plot(titanic['Fare'], color='red')
-plt.title('Fare by Index')
-plt.xlabel('Index')
+plt.title('Fare')
 plt.ylabel('Fare')
-plt.savefig(f'plots/fare_by_index_plot.png', format='png')
+plt.savefig(f'plots/fare_plot.png', format='png')
 plt.clf()
 
 # Plotting histogram
