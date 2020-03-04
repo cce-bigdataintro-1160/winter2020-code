@@ -39,5 +39,6 @@ print(f'feature_names: {wine.feature_names}')
 
 
 # Rebuilding pandas DF from dataset (for plotting and statistical facts)
-convert_to_df = pd.DataFrame(data=np.c_[wine.data, wine.target], columns=wine.feature_names + ['target'])
+convert_to_df = pd.DataFrame(X, columns=wine.feature_names)
+convert_to_df['target'] = y
 print(convert_to_df.describe())
