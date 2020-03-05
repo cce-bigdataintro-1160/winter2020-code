@@ -10,6 +10,9 @@ X = boston_housing.data
 print('Pre scaling X')
 print(X)
 
+# Scaling is a technique used to avoid bias in data caused by a large difference in
+# features scale (order of magnitude). Most Estimators will apply it by default, but
+# a few of them won't.
 scaler = StandardScaler()
 scaler.fit(X)
 scaled_features = scaler.transform(X)

@@ -18,6 +18,8 @@ predictions = model.predict(X_test)
 print(confusion_matrix(y_test, predictions))
 print(classification_report(y_test, predictions))
 
+# Grid search allows you to provide a set of hyperparameters to be tested, with the advantage
+# of not having to reconfigure your estimator and also compares the results
 param_grid = {'C': [0.1, 1, 10, 100, 1000], 'gamma': [1, 0.1, 0.01, 0.001, 0.0001], 'kernel': ['rbf']}
 grid = GridSearchCV(SVC(), param_grid, refit=True, verbose=3)
 grid.fit(X_train, y_train)

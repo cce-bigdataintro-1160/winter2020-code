@@ -13,6 +13,7 @@ from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.35)
 
 # Training a model using multiple differents algorithms and comparing the results
+# It's very easy because the Estimators interface is always the same
 from sklearn.linear_model import LinearRegression
 from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.linear_model import ElasticNet
