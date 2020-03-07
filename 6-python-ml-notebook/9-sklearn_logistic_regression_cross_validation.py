@@ -1,4 +1,6 @@
 from sklearn.datasets import load_iris
+import warnings
+warnings.filterwarnings("ignore", category=FutureWarning)
 
 iris = load_iris()
 columns_names = iris.feature_names
