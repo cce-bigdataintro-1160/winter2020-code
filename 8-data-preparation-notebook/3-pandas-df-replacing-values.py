@@ -1,7 +1,5 @@
 import pandas as pd
 
-pd.options.mode.chained_assignment = None
-
 spotify = pd.read_csv('data/top2018.csv')
 print(spotify.head(5).to_string())
 
