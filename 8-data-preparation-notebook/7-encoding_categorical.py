@@ -34,6 +34,7 @@ ct = ColumnTransformer(
     [('one_hot_encoder', OneHotEncoder(), [4])],
     remainder='passthrough'
 )
-
 x = np.array(ct.fit_transform(titanic))
-print(pd.DataFrame(x, columns=titanic.columns))
+new_columns = ['male', 'female'] + list(titanic.columns)
+new_columns.remove('Sex')
+print(pd.DataFrame(x, columns=new_columns).head(4).to_string())
