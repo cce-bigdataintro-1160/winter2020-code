@@ -1,7 +1,5 @@
 import pandas as pd
 
-pd.options.mode.chained_assignment = None
-
 heart = pd.read_csv('data/heart.csv')
 # print(heart.info())
 # print(heart.head(5).to_string())
