@@ -1,8 +1,7 @@
-from sklearn.preprocessing import LabelEncoder, OneHotEncoder
-import pandas as pd
 import numpy as np
-from sklearn.preprocessing import OneHotEncoder
+import pandas as pd
 from sklearn.compose import ColumnTransformer
+from sklearn.preprocessing import LabelEncoder, OneHotEncoder
 
 np.warnings.filterwarnings('ignore')
 
@@ -20,7 +19,6 @@ encoded_embarked = pd.get_dummies(titanic['Embarked'], drop_first=True)
 dummy_encoded = pd.concat([titanic, encoded_sex, encoded_embarked], axis=1)
 print(dummy_encoded.head(4).to_string())
 
-
 # Encoding categorical variables using LabelEncoder
 print('\n\n********************************** Label Encoded ***************************************')
 le = LabelEncoder()
@@ -28,13 +26,14 @@ label_encoded_categories = titanic[['Sex', 'Embarked']].apply(lambda col: le.fit
 label_encoded_df = pd.concat([titanic, label_encoded_categories], axis=1)
 print(label_encoded_df.head(4).to_string())
 
-# Encoding categorical variables using OneHotEncoder - to be done
+# Encoding categorical variables using OneHotEncoder
 print('\n\n********************************** OneHot Encoded ***************************************')
 ct = ColumnTransformer(
-    [('one_hot_encoder', OneHotEncoder(), [4])],
+    [('one_hot_encoder', OneHotEncoder(), [4,11])],
     remainder='passthrough'
 )
 x = np.array(ct.fit_transform(titanic))
-new_columns = ['male', 'female'] + list(titanic.columns)
+new_columns = ['male', 'female', 'C', 'Q', 'S'] + list(titanic.columns)
 new_columns.remove('Sex')
+new_columns.remove('Embarked')
 print(pd.DataFrame(x, columns=new_columns).head(4).to_string())
