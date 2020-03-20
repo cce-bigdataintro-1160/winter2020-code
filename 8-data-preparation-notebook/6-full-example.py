@@ -14,11 +14,12 @@ titanic['Embarked'] = titanic['Embarked'].fillna(value='S')
 
 # Encoding categorical variables using dummy variables
 encoded_sex = pd.get_dummies(titanic['Sex'], drop_first=True)
+titanic = pd.concat([titanic, encoded_sex], axis=1)
 encoded_embarked = pd.get_dummies(titanic['Embarked'], drop_first=True)
-titanic = pd.concat([titanic, encoded_sex, encoded_embarked], axis=1)
+titanic = pd.concat([titanic, encoded_embarked], axis=1)
 
 # Transforming the Cabin field information in numerical information
-titanic['MarkedCabin'] = titanic['Cabin'].apply(lambda x: 0 if type(x) != str else 1)
+titanic['MarkedCabin'] = titanic['Cabin'].apply(lambda x: 0 if pd.isnull(x) else 1)
 
 # Extracting title from passenger name
 titanic['IsMaster'] = titanic['Name'].apply(lambda name: 1 if 'master.' in name.lower() else 0)
